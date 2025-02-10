@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+  background: #000000;
+}
+.oara{
+    text-align:"center";
+}
+.l1{
+    color: aliceblue;
+    list-style-type: none;
+}
+a{
+    color:aliceblue;
+    text-decoration:none;
+}
+.img{
+   
+    width:"40px";
+    height:"200px";
+    display: inline-block;
+    padding-left: 100px;
+    text-align:center ;
+}
+.frm{
+    text-align:center ;
+}
+.con{
+    text-align:center ;
+}
+.web header{
+    background: #a39ba5;
+    padding: 10px;
+}
+.web nav a{
+     border-right:1px solid white; 
+     padding: 1px;;
+}
+.exe{
+      display:flex;
+ }
+ .sec{
+      flex:3;
+ }
+ .bod{
+      flex:1;
+      height: 250px;
+      margin: 20px 0 0 0;
+ }
+.cont{
+    border: 2px solid #ec8510; 
+     background:rgb(231, 175, 71);
+
+}
+.tile{
+    background: rgb(224, 59, 59); 
+    color: rgb(236, 232, 226); 
+    padding: 15px;
+    text-align: center; 
+}
+.type{
+    padding: 15px;
+}
+.nam{
+    display: flex;
+}
+.nam section{
+    flex: 3;
+}
+.nam aside{
+    flex: 1;
+    background-color: #ec8510;
+    height: 250px;
+    margin: 20px 0 0 0;
+}
+.blg nav{
+    background:none;
+    text-decoration: underline;
+    color:rgb(202, 202, 223);
+}
+.blg img{
+    width: 100%;
+    height: 100%;
+}
+.blg nav a {
+     color: rgb(18, 31, 211);
+      margin-left: auto;
+     justify-content: flex-start;
+ }
+  .blg header{
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     background-color: #babacf;
+  }    
+  .prf{
+    background-color: #46484d;
+  }
+  .prf p {
+    color:white
+  }
+.prf li{
+    color:white
+}
+.title{
+    background: rgb(130, 172, 228); 
+    color: rgb(14, 22, 139);
+}
+.tit{
+    background: rgb(211, 216, 223); 
+    color: rgb(1, 2, 24);
+}
+.titl{
+    background: rgb(211, 216, 223); 
+    color: rgb(102, 107, 202);
+}
+.t7{
+     border:1px solid black; 
+     border-collapse:collapse;
+  
+ }
+ .ta{
+    flex-direction: column;
+ }
+ .tab img{
+     width:250px;
+     height: 300px;
+     padding: 30px;
+
+ }
+ .tab{
+    display:flex;
+ }
+ .blg aside{
+    flex: 3;
+    background-color: #ec8510;
+    height: 250px;
+    width:100px;
+    margin: 20px 0 0 0;
+ }
+</style>
+</head>
+<body>
+    <h2>Basic website layout</h2>
+    <header>My Exciting Website!</header>
+    <nav>
+        <ul>
+            <li><a href="link">home</a></li>
+            <li><a href="link">Blog</a></li>
+            <li><a href="link">About us</a></li>
+            <li><a href="link"> our History</a></li>
+            <li><a href="link">contacts</a></li>
+        </ul>
+    </nav>
+    <header>An Exciting Blog post</header>
+    <img src="shutterstock_1033306540s.jpg"atr="image of hot air balloon" height="200";>
+    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+        Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+        Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+    <h2>Photo gallery</h2>
+    <div class="img";>
+    <h2>Welcome U1 Photo Gallery</h2>
+    <hr/>
+    <p class="para">________________Welcome U1 Photo Gallery_____________</p>
+    <img src="photo-1531512073830-ba890ca4eba2.jpeg" alt="mountain" width="200">
+    <img src="majestic-mountain-range-at-sunrise-with-a-field-of-pink-flowers-photo.jpg" alt="mountain" width="200">
+    <img src="a-serene-and-peaceful-scene-of-a-pond-with-pink-flowers-floating-on-the-water-photo.jpg" alt="mountain" width="200">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, voluptatibus eaque ipsam illo nam maxime blanditiis quisquam aut voluptatem possimus perferendis tenetur, ullam harum reprehenderit et ut iusto accusantium explicabo assumenda dicta a. Tempore voluptate non, earum id corrupti impedit consectetur quaerat. Praesentium cumque incidunt saepe blanditiis eligendi nulla vel?</p>
+    <hr/>
+    <h2>Decription about the Page</h2>
+    <o>Decription about the Page Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. "Richard McClintock", a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum 1 dolor sit amet..", comes from a line in section 1.10.32.</o>
+    <hr/>
+    <p>2023 My Simple Web Page. All rights reserved.</p>
+</div>
+    <h2>Registration form</h2>
+    <div class="frm">
+        <p>__________Register here_________</p>
+        <h2>Please fill and submit form</h2>
+        <form>
+            <label for="fname"> Name:</label>
+            <input type="text" placeholder="enter your name" id="fname" name="gname"><br/><br/>
+            <label for="fname"> Email:</label>
+            <input type="text" placeholder="enter your email" id="fname" name="gname"><br/><br/>
+            <label for="fname"> Age:</label>
+            <input type="Enyer" placeholder="enter your age" id="Age" name=""><br/><br/>
+            <label for="fname"> Date of birth:</label>
+            <input type="text" placeholder="dd-mm-yyyy" id="fname" name="gname"><br/><br/>
+            <label for="fname"> phone number:</label>
+
+<select>
+    <option disabled selected> select your code </option>
+    <option>us</option>
+    <option>india</option>
+    <option>germany</option>
+</select>
+            <input type="text" placeholder="enter your phone number" id="fname" name="gname"><br/><br/>
+            <label for="fname"> select your gender:</label>
+<input type="radio" id="html" name="color" valur="red">
+<label for="red">male</label>
+<input type="radio" id="html" name="color" valur="green">
+<label for="green">female</label>
+<input type="radio" id="html" name="color" valur="blue">
+<label for="blue">other</label><br/><br/>
+<label for="fname"> choose ypur skill leve;:</label>
+<input type="checkbox" id="html" name="color" valur="red">
+<label for="red">beginner</label>
+<input type="checkbox" id="html" name="color" valur="green">
+<label for="green">intermediate</label>
+<input type="checkbox" id="html" name="color" valur="blue">
+<label for="blue">advanced</label><br/><br/>
+<label for="fname"> select your favourite color:</label>
+<input type="color" id="fname" name="gname"><br/><br/>
+<label for="fname"> father Name:</label>
+<input type="text" placeholder="enter your father name" id="fname" name="gname"><br/><br/>
+<label for="fname"> select your language:</label>
+<input type="radio" id="html" name="color" valur="form">
+<label for="frame">tamil</label>
+<input type="radio" id="html" name="color" valur="form">
+<label for="frame">english</label>
+<input type="radio" id="html" name="color" valur="form">
+<label for="frame">malyalam</label><br/><br/>
+<label for="fname"> Hobbies:</label>
+<input type="text" placeholder="enter your hobbies" id="fname" name="gname"><br/><br/>
+<label for="fname"> address:</label>
+<textarea></textarea><br/><br/>
+<input type="Submit" value="submit">
+        </form>
+    </div>
+    <h1>contact us page</h1>
+    <div class="con";>
+    <h1>contact us</h1>
+    <p>If you have any questions or feedback, please feel free to contact us:</p>
+    <p><b>Email:</b> contact@example.com</p>
+    <p><b>phone:</b> +123-456-7890</p>
+    <p>you can also visit our office:</p>
+    <p>
+        <i>
+            123 Main Street<br/>
+            Cityville, State 12345<br/>
+            United States
+        </i>
+    </p>
+ <img src="download (5).jpeg" atr="img of shirt";>
+ <p style="display: inline-block;"> Mens Casual Premium Slim Fit T-Shirts</p>
+ <img src="download (5).jpeg" atr="img of shirt";>
+</div>
+<div class="web";>
+<header>Kitten kare</header>
+<nav>
+
+        <a href="link">home</a>
+        <a href="link">About</a>
+        <a href="link">Services</a>
+</nav>
+</div>
+<div class="ex7">
+    <div class="exe">
+        <section class="sec">
+            <h2>welcome!</h2>
+            <img src="aesthetic-4886533_1280.jpg"width="400">
+        <p>The domestic cat[1][2] (Felis catus [2] or Felis silvestris catus[4], informally Felis domesticus [6][7]) is a small, usually furry, domesticated, carnivorous mammal. It is often called the housecat when kept as an indoor pet. [8] or simply the cat when there is no need to distinguish it from other felids and felines. Cats are valued by humans for companionship and ability to hunt vermin and household pests. They are primarily nocturnal.[9]</p>
+        </section>
+        <aside class="bod">
+            <h2>cat body types</h2>
+            <ul>
+                <li>oriental</li>
+                <li>forighn</li>
+                <li>Semi-Foreign</li>
+                <li>Semi-Cobby</li>
+                <li>Cobby</li>
+            </ul>
+        </aside>
+    </div>
+</div>
+<h2>Blog page with sidebar</h2>
+<div class="blg";>
+    <header>
+        <h1>My awesome Blog</h1>
+        <nav>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+        </nav>
+    </header>
+    <img src="what-is-a-blog-1200x600-1.jpeg"alt="image of a blog" width="700px">
+    <div class="tab">
+        <div class="first">
+            <article>
+            <h2 style="color:rgb(40, 82, 145)">The title of the first blog</h2>
+            <h5>by aziz ali</h5>
+            <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue commodo neque, nec laoreet leo consequat id. Vivamus volutpat dolor quis odio fermentum aliquet non non tellus. Morbi suscipit sapien eget neque eleifend, sit amet placerat massa scelerisque. Lorem ipsum dolor</p>
+            <h2 style="color:rgb(40, 82, 145)";>The title of the first blog</h2>
+            <h5>by aziz ali</h5>
+            <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue commodo neque, nec laoreet leo consequat id. Vivamus volutpat dolor quis odio fermentum aliquet non non tellus. Morbi suscipit sapien eget neque eleifend, sit amet QQ /9 Lorem ipsum dolor</p>
+            </article>
+        </div>
+        <aside style="padding: 150;">
+            <div class="exe">
+                <div class="cont">
+            <h2 div class="tile">useful links</h2>
+            <ul>
+                <li><a href="#" style="color: #000000;">aziz ali.com</a></li>
+                <li><a href="#" style="color: #000000;">Blog</a></li>
+            </ul>
+        </aside>
+    </div>
+    </div>
+<h2>personal profile page</h2>
+<div class="prf";>
+    <h1 style="color:rgb(130, 168, 224)";>About victoria crist</h1>
+    <p>My name is Victoria and I am <span style="color:yellow;">jolly, clumsy,</span> and <span style="color:yellow;">four-eyed.</span></p>
+    <hr/>
+    <h2 style="color:rgb(130, 168, 224)";>my classes this quarter</h2>
+    <ul>
+        <li>CSE 451- Operating Systems</li>
+        <li>CSE 471 - Computer Design and Organization</li> 
+        <li>PHYS 121 - Physics: Mechanics</li> 
+        <li>CSE 498- Research w/ Prof. Luis Ceze</li> 
+    </ul>
+    <h2 style="color:rgb(130, 168, 224)";>my favourite movies</h2>
+    <p>(I actually don't watch too many movies, so...here goes!)</p>
+    <ol>
+        <li>The last 30 minutes of Forrest Gump <span style="color:rgb(235, 93, 93);"> (IMDB)</span></li>
+        <li>Trek Episode V with Zazu <span style="color:rgb(235, 93, 93);"> (IMDB)</span></li>
+        <li>Fight Club (not really, but I've seen like 3 movies total so this is my 3rd fave by technicality) <span style="color:rgb(235, 93, 93);">(IMDB)</span></li>
+    </ol>
+    <h2 style="color:rgb(130, 168, 224)";>my moods</h2>
+    <p>
+        happy:<img src="istockphoto-1193366252-612x612.jpg" alt="happy" width="300" height="200px">
+        sad:<img src="istockphoto-626175114-612x612.jpg" alt="happy" width="300" height="200px">
+    </p>
+    <h2 style="color:rgb(130, 168, 224)";>Fun facts about my neighbours</h2>
+    <ul>
+        <li>Sue Smith: Effervescent is a word that describes her.</li>
+        <li>Bill Thompson: Loves playing Yu-Gi-Oh.</li> 
+    </ul>
+</div>
+<h2>course and interests page</h2>
+<div class="tab";>
+    <div class="ta";>
+    <div class="title">
+        <h2>courses</h2>
+    </div>
+    <p>here are some courses i've taken:</p>
+    <table class="t7";>
+        <tr>
+            <th class="t7" colspan="3";>course number</th>
+            <th class="t7" colspan="3";>course title</th>
+            <th class="t7" colspan="3";>semester taken</th>
+        </tr>
+        <tr>
+            <th class="t7" colspan="7";>For credit</th>
+        </tr>
+         <tr div class="titl";>
+            <td class="t7" colspan="3" style="color:rgb(33, 72, 128)";><strong> 6.813</strong></td>
+            <td class="t7" colspan="3";>User Interface Design</td>
+            <td class="t7" colspan="3";>Spring 2014</td>
+        </tr>
+        <tr>
+            <td class="t7" colspan="3"  style="color:rgb(33, 72, 128)";><strong>6.034</strong></td>
+            <td class="t7" colspan="3";>Artificial Intelligence</td>
+            <td class="t7" colspan="3";>Fall 2013</td>
+        </tr>
+        <tr div class="tit";>
+            <td class="t7" colspan="3" style="color:rgb(33, 72, 128)";><strong>6.006</strong></td>
+            <td class="t7" colspan="3";>Introduction to Algorithms</td>
+            <td class="t7" colspan="3";>Fall 2013</td>
+        </tr>
+        <tr>
+            <th class="t7" colspan="7";>Listener</th>
+        </tr>
+        <tr div class="tit";>
+            <td class="t7" colspan="3" style="color:rgb(101, 132, 175)";> <strong>6.867</strong></td>
+            <td class="t7" colspan="3";>Machine Learning</td>
+            <td class="t7" colspan="3";>Fall 2013</td>
+
+        </tr>
+        <tr>
+            <td class="t7" colspan="3" style="color:rgb(93, 126, 172)";><strong>6.830</strong></td>
+            <td class="t7" colspan="3";>Database Systems</td>
+            <td class="t7" colspan="3";>Fall 2012</td>
+        </tr>
+    </table>
+    <div class="title">
+        <h2>Interests</h2>
+    </div>
+    <p>I am interested HCI, memes, and youtube videos.</p>
+</div>
+    <img src="download.jpeg"alt="image" width="300" height="200px">
+</div>
+</body>
+</html>
