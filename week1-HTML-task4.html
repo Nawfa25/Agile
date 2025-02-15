@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ex1 */
+.container{
+    display:inline-grid;
+    grid-template-columns: 180px 50px;
+    grid-template-rows: auto auto auto auto auto;
+    background-color:white;
+    grid-gap: 2px;
+    border: 1px solid black;
+    padding:2px;
+    text-align: center;
+}
+.container *{
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+ header, nav, footer{
+    grid-column: 1/3;
+}
+.container  aside{
+    grid-area:3/2/5/3;
+    text-align: center;
+}
+/* ex2 */
+.container2 {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto; 
+    grid-template-columns: 30% 70%; 
+    width: 50%;
+    border: 1px solid black;
+ }
+ .container2 header, .container2 nav, .container2 footer {
+    text-align: center;
+    padding: 4px;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+        }
+        .container2 footer {
+     border-top: 1px solid black;
+     border-bottom: none;
+     padding:10px;
+        }
+        .container2 .main {
+    display: flex;
+    text-align: center;
+    font-weight: bold;        
+        }
+        .container2 .sidebar {
+     width: 100%;
+     text-align: center;
+     border-right: 1px solid black;
+     padding: 15px;
+     grid-area:3/2/5/3;
+     padding: 25px;
+        } 
+        .container2 .content {
+     width: 100%;
+     text-align: center;
+     padding: 30px;
+        }    
+        /* ex3 */
+.container3 {
+    display: grid;
+    grid-template-columns:1fr 2fr; 
+    width: 50%;
+    gap: 5px;
+ }  
+ .container3 * {
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+        }
+.container3 header,.container3 nav,.container3 footer{
+    grid-column: 1/3;
+}
+.container3 .aside2{
+    grid-column: 1/3;
+}
+.container3 main{
+    grid-row: 3/5;
+}
+/* ex4 */
+.container4{
+            display:inline-grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: 
+            "header header header"
+            "menu main right"
+            "menu footer footer";
+            gap: 10px;
+            background-color: rgb(101, 123, 194);
+            padding: 10px;
+        }
+        .container4 *{
+            background-color: lightblue;
+            padding: 30px;
+            border: none;
+        }
+        .container4 *:hover{
+            background-color: rgb(131, 131, 212);
+            color:white;
+            border-radius:10px;
+            
+        }
+        .container4 .header{grid-area: header;}
+        .container4 .menu{grid-area: menu;}
+        .container4 .main{grid-area: main;}
+        .container4 .right{grid-area: right;}
+        .container4 .footer{grid-area: footer;}
+/* ex5 */
+.container5{
+    display: inline-grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap:10px;
+    background-color: rgb(205, 209, 209);
+    padding: 14px;
+    padding-bottom:0px;
+
+}
+.container5 *{
+    background-color: rgb(173, 161, 161);
+    text-align: center;
+    padding: 20px;
+    
+}
+.container5 header{
+    background-color: rgb(70, 68, 68);
+    color: white;
+    padding: 15px;
+    grid-column: 1/3;
+    width: 30%;
+    margin-left: 10px;
+}
+.container5 nav{
+    background-color: rgb(163, 157, 157);
+    padding: 4px;
+    color: white;
+    grid-column: 1/3;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+.container5 main{
+    background-color: rgb(163, 157, 157);
+    color: white;
+    grid-column: 1/3;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+.container5 article{
+    background-color: rgb(70, 68, 68);
+    color: white;
+    padding: 40px;
+    margin-left: 10px;
+}
+.container5 aside{
+    background-color: rgb(177, 172, 172);
+    color: white;
+    padding: 30px;
+    margin-right: 15px;
+}
+.container5 footer{
+    background-color:  rgb(163, 157, 157);
+    grid-column: 1/3;
+    margin-right: 15px;
+    margin-left: 10px;
+    padding-bottom: 0%;
+}  
+/* ex6 */
+.container6 {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  padding: 5px;
+  color: white;
+}
+.container6 {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  text-align: center;
+}
+.container6 header {
+  grid-area: header;
+  text-align: center;
+  background-color: orange;
+}
+.container6 nav {
+  grid-area: menu;
+  background-color: blue;
+  padding:20px;
+}
+.container6 article {
+  grid-area: content;
+  background-color: green;
+  padding:150px;
+}
+.container6 footer {
+  grid-area: footer;
+  background-color: brown;
+}
+/* ex7 */
+.container7{
+    display: grid;
+    grid-template-rows: auto auto auto auto ; 
+    width: 50%;
+    border: 1px solid black;
+    
+}
+.container7 *{
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+}
+.container7 header{
+    background-color: rgb(231, 130, 226);
+}
+.container7 nav{
+    background-color: rgb(152, 33, 163);
+    padding: 2px;
+    color: white;
+}
+.container7 content{
+    padding: 50px;
+}
+.container7 footer{
+    background-color: rgb(224, 54, 240);
+}
+/* ex8 */
+.container8 {
+    display: inline-grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 30% auto;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "aside main"
+    "footer footer";
+    border: 1px solid black;
+    width: 60%;
+}
+.container8 *{
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+.container8 header{
+    background-color: rgb(231, 130, 226);
+    grid-column: span 2;
+    padding: 15px;
+}
+.container8 nav{
+    background-color: rgb(152, 33, 163);
+    color: white;
+    grid-column: span 2;
+    padding: 2px;
+}
+.container8 content{
+    padding: 50px;
+}
+.container8 aside{
+    background-color: rgb(240, 71, 164);
+    padding: 10x;
+}
+.container8 footer{
+    background-color: rgb(224, 54, 240);
+    grid-column: span 2;
+    padding: 15px;
+}
+/* ex9 */
+.container9{
+    display: inline-grid;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: auto auto;
+    width: 60%;
+    gap: 5px;
+    padding: 10px;
+    background-color: aquamarine;
+    padding-bottom: 0%;
+    padding-top: 0%;
+}
+.container9 *{
+    background-color: rgb(148, 206, 141);
+    text-align: center;
+    padding: 20px;
+}
+.container9 header footer{
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+.container9 footer{
+    padding-bottom: 0%;
+}
+.container9 main{
+    padding:9vh 7vh;
+    grid-row: 2/4;
+}
+.container9 .aside1{
+    text-align: center;
+    padding: 20px;
+}
+.container9 .aside2{
+    grid-column: 2/3;
+    padding: 2px;
+    background-color: yellow;
+}
+.container9 section{
+    grid-column: 1/3;
+    padding:20px;
+}
+.container9 .aside3{
+    background-color: yellow;
+}
+/* ex10 */
+.container10 {
+    display: inline-grid;
+    grid-template-rows: auto auto auto auto auto o;
+    grid-template-columns: auto auto auto;
+    gap:5px;
+    animation: fadeInUp 1s ease-out;
+}
+.container10 *{
+    background-color: rgb(205, 209, 204);
+    text-align: center;
+    padding: 15px;
+}
+.container10 header{
+    grid-column: 1/4;
+    padding: 5px;
+    
+}
+.container10 nav{
+    grid-column: 1/4;
+}
+.container10 main{
+    grid-column: 1/4;
+    padding: 30px;
+}
+.container10 footer{
+    grid-column: 1/4;
+    padding: 10 2px;
+}
+.container10 .aside1{
+    padding: 7vh ;
+}
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.container10 nav a { transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; }
+.container10 nav a:hover { color: tomato; transform: scale(1.1); }
+.container10 header, .container10 nav, .container10 main, .container10 footer { border-bottom: 2px solid #ddd; }
+.container10 .aside1:hover, .container10 .aside2:hover, .container10 .aside3:hover { background-color: #4da8a8; transition: background-color 0.5s ease-in-out; }
+/* ex11 */
+.container11 {
+    display:flex;
+    flex-direction: column;
+    min-height: 60vh;
+    color: #130f0f;
+    padding: 4px;
+}
+.container11 header {
+    text-align: center;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+.container11 header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+.container11 header p {
+    margin: 5px 0;
+    font-size: 10px;
+}
+.container11 nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    background-color: #141313;
+}
+.container11 nav a {
+    text-decoration: none;
+    color: #f1f2f3;
+}
+.container11 main {
+    display: flex;
+    padding: 15px;
+    background-color: #c9c6c6;
+}
+.container11 .left {
+    flex: 3;
+    margin-right: 7px;
+}
+.container11 .left section {
+    margin-bottom: 10vh;
+    background-color:white;
+    padding: 10px;
+}
+.container11 .left section img {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+}
+.container11 .right {
+    flex: 1;
+    border: 1px solid #ddd;
+    flex-direction: column;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.container11 .right section img {
+    width: 70%;
+    width:100%;
+}
+.container11 footer {
+    background-color: #837e7e;
+    text-align: center;
+    padding: 10px;
+}
+.right section {
+  background-color: #f4f4f4; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 20px; 
+}
+.about-me {
+  background-color: #e0f7fa; 
+}
+.popular-post {
+  background-color: #fff3e0; 
+}
+.follow-me {
+  background-color: #e8f5e9; 
+}
+.right section h3 {
+  margin-bottom: 10px; 
+}
+.right section img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+/* ex12 */
+.container12 {
+    display: inline-grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+    gap: 7px;
+}
+.container12 *{
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+.container12 header{
+    background-color: rgb(59, 57, 59);
+    color: white;
+    padding: 8px;
+}
+.container12 nav{
+    background-color: rgb(176, 171, 177);
+    color: white;
+    padding: 2px;
+    margin-top:-10px;
+}
+.container12 main{
+    background-color: rgb(198, 199, 201);
+    padding: 8vh;
+    margin-left: 30px;
+    
+}
+.container12 aside{
+    background-color: rgb(236, 228, 233);
+    margin-right: 30px;
+
+}
+.container12 footer{
+    background-color: rgb(112, 110, 112);
+    grid-column: span 2;
+    padding: 15px;
+    color: white;
+}
+         /* ex13 */
+.container13{
+    display: inline-grid;
+    grid-template-rows: auto auto auto auto auto o;
+    grid-template-columns: auto auto auto;
+    gap:5px;
+    background-color: rgb(175, 172, 172);
+    padding: 10px;
+}
+.container13 *{
+    background-color: rgb(205, 209, 204);
+    text-align: center;
+    padding: 50px;
+}
+.container13 header{
+    grid-column: 1/4;
+    padding: 30px;
+    background-color: rgb(66, 64, 64);
+    color: white;
+    
+}
+.container13 nav{
+    grid-column: 1/4;
+    padding: 5px;
+    background-color: rgb(170, 162, 162);
+    color: white;
+}
+.container13 main{
+    grid-column: 1/4;
+    padding: 40px;
+    background-color: rgb(99, 95, 95);
+    color: white;
+}
+.container13 footer{
+    grid-column: 1/4;
+    padding:  4vh 2px;
+    background-color: grey;
+    color:white;
+}
+.container13 .aside1{
+    padding: 7vh ;
+    background-color: white;
+    margin-left: 10px;
+}
+.container13 .aside3{
+    margin-right: -150px;
+}
+    </style>
+</head>
+<body>
+    <h1>Ex 1:</h1>
+    <div class="container">
+        <header>header</header>
+        <nav>nav</nav>
+        <section>section</section>
+        <article>article</article>
+        <aside>aside</aside>
+        <footer>footer</footer>
+    </div>
+
+    <h1>Ex 2:</h1>
+    <div class="container2">
+        <header>Header Section</header>
+        <nav>Navigation Bar</nav>
+        <div class="main">
+            <div class="sidebar">Index</div>
+            <div class="content">Content section</div>
+        </div>
+        <footer>Footer Section</footer>
+    </div>
+    <h1>Ex 3:</h1>
+    <div class="container3">
+        <header>Header </header>
+        <nav>Nav</nav>
+        <main>main</main>
+        <aside class="aside1">aside</aside>
+        <section>section</section>
+        <aside class="aside2">aside</aside>
+        <footer>Footer</footer>
+    </div>
+    <h2>Ex 4</h2>
+    <div class="container4">
+        <button class="header">header</button>
+        <button class="menu">menu</button>
+        <button class="main">main</button>
+        <button class="right">right</button>
+        <button class="footer">footer</button>
+    </div>
+    <h1>ex5:</h1>
+    <div class="container5">
+        <header>page title</header>
+        <nav>navigation</nav>
+        <main>introduction</main>
+        <article>main content area</article>
+        <aside>sidebar</aside>
+        <footer>footer</footer>
+        </div>
+
+    <h1>ex6:</h1>
+<div class="container6">
+  <header> Header</header>
+  <nav>nav</nav>
+  <article>article</article>
+  <footer>Footer</footer>
+</div>
+
+<h1>ex7:</h1>
+<div class="container7">
+<header> Header</header>
+<nav>nav</nav>
+<content>main content</content>
+<footer>Footer</footer>
+</div>
+
+<h1>ex8:</h1>
+<div class="container8">
+<header> Header</header>
+<nav>navigation Bar</nav>
+<aside>left panel</aside>
+<content>main content</content>
+<footer>Footer</footer>
+</div>
+
+<h1>ex9:</h1>
+<div class="container9">
+<header>header</header>
+<main>intro copy</main>
+<div class="aside1">hero image</div>
+<div class="aside2">call to action</div>
+<section>features</section>
+<article>more copy</article>
+<div class="aside3">call to action</div>
+<footer>footer</footer>
+</div>
+
+<h1>ex10:</h1>
+<div class="container10">
+    <header>logo</header>
+    <nav>
+        <a href="#">home</a>
+        <a href="#">products</a>
+        <a href="#">services</a>
+        <a href="#">about</a>
+        <a href="#">contact</a>
+    </nav>
+    <main>feature</main>
+    <div class="aside1">column1</div>
+    <div class="aside1">column2</div>
+    <div class="aside1">column3</div>
+    <footer>@copyright 2011</footer>
+</div>
+<h1>ex11</h1>
+<div class="container11">
+    <header>
+        <h1>Karka UI Layout</h1>
+        <p>Develop your skills by our tech</p>
+    </header>
+    <nav>
+      <div>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a></div>
+        <a href="#">Link</a>
+    </nav>
+    <main>
+      <div class="left">
+        <section>
+            <article>
+                <h2>TITLE HEADING</h2>
+                <p>Title description, Dec 7, 2017</p>
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnVpbGRpbmd8ZW58MHx8MHx8fDA%3D" alt="building">
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>TITLE HEADING</h2>
+                <p>Title description, Sep 2, 2017</p>
+                <img src="https://img.freepik.com/premium-psd/ferrari-formula-1-race-car-speeding-track_957244-34607.jpg" alt="f1 ferrari">
+                <p>Some text...</p>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </article>
+        </section>
+      </div>
+      <div class="right">
+        <section class="about-me">
+            <h3>About Me</h3>
+            <img src="https://i.pinimg.com/736x/35/99/83/3599834c250febaf0473eed92554eb36.jpg" alt="women">
+            <p>Some text about me in culpa qui officia deserunt mollit anim.</p>
+        </section>
+        <section class="popular-post">
+            <h3>Popular Post</h3>
+            <img src="https://c4.wallpaperflare.com/wallpaper/322/110/323/jude-bellingham-real-madrid-champions-league-hd-wallpaper-thumb.jpg" alt="bellingham">
+            <img src="https://images5.alphacoders.com/521/521476.jpg" alt="messi">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp5T3sMk63TtxVUPhJSFhwlKOXSETVxen02YOJQzlSTgPgcTf-_dCl7nFLyPxIvbHkSUs&usqp=CAU" alt="mbappe" >
+        </section>
+        <section class="follow-me">
+            <h3>Follow Me</h3>
+            <p>Some text...</p>
+        </section>
+  </div>
+</main>
+<footer>
+    <p>Footer</p>
+</footer>
+</div>
+<h1>ex12:</h1>
+<div class="container12">
+    <header> Header</header>
+    <nav>navigation Bar</nav>
+    <main>main content</main>
+    <aside>sidebar</aside>
+    <footer>Footer</footer>
+</div>
+<h1>ex13:</h1>
+<div class="container13">
+    <header>header</header>
+    <nav>navigation bar</nav>
+    <main>slideshow</main>
+    <div class="aside1"></div>
+    <div class="aside1"></div>
+    <div class="aside1"></div>
+    <footer>footer</footer>
+</div>
+
+
+
+
+
+</body>
+</html>
