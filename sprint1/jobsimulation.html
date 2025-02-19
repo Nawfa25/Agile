@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+    background-position: center;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out; 
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+}
+nav ol {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ol li {
+    display: inline-block;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition:transform 0.2s ease;
+}
+nav ul li a:hover {
+    background-color: rgba(238, 230, 230, 0.3);
+    color: rgb(8, 8, 8);
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+header {
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+}
+
+.logo-container {
+  display: inline-block;
+  padding-left: 20px;
+}
+.logo-container img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 50px salmon;
+}
+.logo {
+  width: 150px;
+}
+.navbar {
+  float: right;
+  padding-right: 20px;
+  
+}
+.navbar ul {
+  list-style: none;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-left: 20px;
+}
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+main {
+  margin-top: 80px;
+  padding: 20px;
+  background-image: url(bk.jpeg) ;
+  color: white;
+  border-top:none;
+  background-position: center;
+  background-size: cover;
+  padding: 90px;
+}
+#welcome-section {
+  text-align: center;
+}
+#welcome-section h1 {
+  font-size: 2.5em;
+}
+
+#welcome-section p {
+  font-size: 1.2em;
+  color: #f5f3f1;
+  font-family: 'sail',cursive;
+}
+#services {
+  margin-bottom: 40px;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  padding: 50px;
+}
+.service-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    animation: fadeIn 2s ease-in-out; 
+}
+.service-list ul :hover{
+    background-color: rgba(238, 230, 230, 0.3);
+    color:#f54346;
+    transform: scale(1.1);
+}
+.service-list li :hover{
+    background-color: rgba(238, 230, 230, 0.3);
+    color:#ff9966;
+    transform: scale(1.1);
+}
+.service-list li {
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ffffff, #e3e3e3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.service-list img{
+  width: 60px;
+  height: 60px;
+}
+
+#services h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.service-list ul li {
+  margin-bottom: 20px;
+}
+
+.service-list h3 {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.service-list p {
+  font-size: 1em;
+  color: #666;
+}
+
+#about {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+#about h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.2em;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+}
+.contact-info p,
+.social-media a {
+  margin: 10px 0;
+}
+.contact-info a,
+.social-media a {
+  color: #fff;
+  text-decoration: none;
+}
+.contact-info a:hover,
+.social-media a:hover {
+  text-decoration: underline;
+}
+.social-media a {
+  margin: 0 10px;
+}
+@media screen and (max-width: 768px) {
+  .navbar ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  .service-list ul {
+    padding-left: 20px;
+  }
+
+  #services, #about {
+    padding:  20px;
+  }
+}
+    </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="company logo">
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container1">
+   <main>
+    <section id="welcome-section">
+      <h1>Welcome to Our career Simulation Platform</h1>
+      <p>Your gateway to mastering new skills and preparing for your next job role. Explore our services and take control of your career growth.</p>
+    </section>
+ </div>
+    <section id="services">
+      <h2>Services Offered</h2>
+      <div class="service-list">
+        <ul>
+        
+          <li>
+            <img src="icon.png"alt=icon>
+            <h3>Job Skill Development</h3>
+            <p>Enhance your skills with our interactive training modules tailored to real-world job scenarios.</p>
+          </li>
+ 
+          <li>
+            <img src="icon2.png"alt=icon>
+            <h3>Resume Building</h3>
+            <p>Get tips and templates to create a professional resume that stands out to employers.</p>
+          </li>
+          <li>
+            <img src="icon3.png"alt=icon>
+            <h3>Mock Interviews</h3>
+            <p>Participate in mock interviews with feedback from industry professionals to prepare for your next job interview.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We are dedicated to helping individuals enhance their career prospects through innovative job simulations. Our platform empowers users with the necessary tools and resources to build skills, improve resumes, and practice for real-world job scenarios. Our mission is to help you succeed in your career journey.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="contact-info">
+      <p><a href="tel:+1234567890">Phone: +1 (234) 567-890</a></p>
+      <p><a href="mailto:info@jobsimulation.com">Email: info@jobsimulation.com</a></p>
+    </div>
+    <div class="social-media">
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+      <a href="https://www.twitter.com" target="_blank">Twitter</a>
+    </div>
+  </footer>
+</body>
+</html>
+
