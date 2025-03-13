@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+.container1{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 400px;
+}
+.container1 header,.container1 footer{
+    background-color: orange;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+.container1 footer{
+    background-color: rgb(168, 16, 16);
+    padding: 5px;
+}
+.container1 .content{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+}
+.container1 nav{
+    background-color: blue;
+    text-align: center;
+    color: white;
+    flex: 1;
+}
+.container1 article{
+    background-color: green;
+    color: white;
+    flex: 3;
+    text-align: center;
+}
+/* task2 */
+.container2{
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    width: 50%;
+}
+.container2 header,.container2 footer{
+    background-color: rgb(210, 104, 215);
+    text-align: center;
+    padding: 10px;
+}
+.container2 footer{
+    background-color: rgb(225, 29, 199);
+}
+.container2 nav{
+    background-color: rgb(241, 157, 230);
+    padding: 2px;
+    text-align: center;
+    color: white;
+}
+.container2 content{
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+}
+/* task3 */
+.container3{
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    width: 70%;
+}
+.container3 header,.container3 footer{
+    background-color: rgb(210, 104, 215);
+    text-align: center;
+    padding: 10px;
+}
+.container3 footer{
+    background-color: rgb(197, 50, 148);
+}
+.container3 nav{
+    background-color: rgb(137, 11, 149);
+    padding: 2px;
+    text-align: center;
+    color: white;
+}
+.container3 .content{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+}
+.container3 aside{
+    background-color: rgb(225, 151, 212);
+    text-align: center;
+    padding: 40px;
+    flex: 1;
+}
+.container3 content{
+    background-color: white;
+    flex: 3;
+    text-align: center;
+    padding: 40px;
+}
+/* task4 */
+.container4 {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: rgb(200, 220, 225);
+    padding: 10px;
+    gap: 10px;
+    padding-bottom: 0%;
+    padding-top: 0%;
+}
+.container4 header,.container4 footer,.container4 main,.container4 article,.container4 .aside1,.container4 .aside2,.container4 .aside3,.container4 .aside4 {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(150, 180, 190);
+    font-weight: bold;
+    }
+    .container4 header {
+    padding: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.container4 footer{
+    padding: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.container4 .section1 { 
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.container4 main {
+    flex: 2;
+    background-color: rgb(150, 180, 190);
+}
+ .container4 .aside1 {
+    flex: 1;
+    background-color: rgb(180, 200, 210);
+}
+.container4 .aside2 {
+    flex: 1;
+    background-color: yellow;
+}
+.container4 article {
+    background-color: rgb(150, 180, 190);
+}
+.container4 .section2 {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.container4 .aside3 {
+    flex: 1;
+    background-color: rgb(180, 200, 210);
+}
+.container4 .aside4 {
+    flex: 1;
+    background-color: yellow;
+}
+/* task5 */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.container5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    width: 500px;
+}
+.header, .nav, .feature, .footer {
+    width: 100%;
+    text-align: center;
+    background-color: #ddd;
+    padding: 15px;
+    margin: 5px 0;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav a {
+    margin: 0 10px;
+     text-decoration: underline;
+    color: blue;
+}
+.columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+.column {
+    width: 32%;
+    background-color: #e3e3e3;
+    padding: 20px;
+    text-align: center;
+}
+.footer {
+    font-size: 14px;
+}
+            
+</style>
+</head>
+<body>
+    <!--task1-->
+<h1>Task1:</h1>
+<div class="container1">
+    <header> Header</header>
+    <div class="content">
+        <nav>nav</nav>
+        <article>article</article>
+    </div>
+    <footer>Footer</footer>
+    </div>
+    <!-- task2-->
+    <h1>Task2:</h1>
+    <div class="container2">
+    <header> Header</header>
+    <nav>Navigation Bar</nav>
+    <content>main content</content>
+    <footer>Footer</footer>
+    </div>
+    </div>
+    <!-- task3-->
+    <h1>Task3:</h1>
+    <div class="container3">
+    <header> Header</header>
+    <nav>navigation Bar</nav>
+    <div class="content">
+        <aside>left panel</aside>
+        <content>main content</content>
+    </div>
+    <footer>Footer</footer>
+    </div>
+<!-- task4:-->
+<h2>Task4:</h2>
+<div class="container4">
+    <header>Header</header>
+    <div class="section1">
+    <main>Intro Copy</main>
+    <div class="right-section">
+        <div class="aside1">Hero Image</div>
+        <div class="aside2">Call to Action</div>
+    </div>
+</div>
+    <article>Features</article>
+    <div class="section2">
+        <div class="aside3">More copy</div>
+        <div class="aside4">Call to action</div>
+    </div>
+    <footer>Footer</footer>
+</div>
+<!--task5 -->
+<h2>Task5:</h2>
+<div class="container5">
+    <div class="header">
+        <div class="logo">Logo</div>
+    </div>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="feature">Feature</div>
+    <div class="columns">
+        <div class="column">Column One</div>
+        <div class="column">Column Two</div>
+        <div class="column">Column Three</div>
+    </div>
+    <div class="footer">© Copyright 2011</div>
+</div>
+</body>
+</html>
