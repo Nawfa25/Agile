@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Layout</title>
+<style>
+/* Task1 */
+.container1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    width: 400px;
+}
+
+.container1 header,.container1 footer {
+    background-color: #48CAE4;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.container1 footer {
+    background-color: #FF9F1C;
+}
+
+.top-section {
+    display: flex;
+    gap: 5px;
+}
+
+.hero {
+    background-color: #DAB6FC;
+    flex-direction: row;
+    flex: 1;
+    padding: 30px;
+    text-align: center;
+}
+
+.main-content {
+    background-color: #FFC300;
+    flex: 3;
+    padding: 30px;
+    text-align: center;
+    height: 20vh;
+}
+
+.middle-section {
+    display: flex;
+    gap: 5px;
+}
+
+.sidebar {
+    background-color: #90BE6D;
+    flex-direction: row;
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    height: 90px;
+}
+
+.extra-content {
+    background-color: #6C757D;
+    flex: 2;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+.bottom-section {
+    display: flex;
+    gap: 5px;
+}
+
+.related-images {
+    background-color: #43AA8B;
+    flex: 2;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.related-posts {
+    background-color: #E29578;
+    flex: 1;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+/* Task2 */
+.container2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 500px;
+    height: 300px;
+    border: 2px solid lightgray;
+    padding: 5px;
+    background-color: #dce0d3;
+}
+
+.container2  .header2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.container2  .header2 div {
+    background-color: #c97f73;
+    height: 40px;
+    flex: 1;
+}
+
+.container2  .content2 {
+    display: flex;
+    flex: 1;
+    gap: 5px;
+}
+
+.container2  .left2 {
+    background-color: #6b7259;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container2  .left2 .box2 {
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+}
+
+.container2  .right2 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container2  .right2 div {
+    background-color: #808d5b;
+    flex: 1;
+}
+    /* Task3 */
+    .container3 body {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+}
+
+.container3 h2,.container3 p {
+    margin-bottom: 20px;
+}
+.container3, .container{
+    display: flex;
+    background-color: white;
+    width: 400px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+}
+
+.container3{
+            padding: 10px 0;
+        }
+
+.container{
+    padding: 10px;
+    gap: 15px;
+}
+
+ .box {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(133, 245, 133);
+    border: 1px solid #000;
+}
+
+.justify-start {
+            display: flex;
+        }
+
+.left{
+    margin-left: -10px;
+}
+ </style>
+</head>
+<body>
+<!--task1-->
+<h1>Task1</h1>
+<div class="container1">
+    <header>Header</header>
+    <div class="top-section">
+        <section class="hero">Hero</section>
+        <article class="main-content">Main Content</article>
+    </div>
+    <div class="middle-section">
+        <aside class="sidebar">Sidebar</aside>
+        <article class="extra-content">Extra Content</article>
+    </div>
+    <div class="bottom-section">
+        <section class="related-images">Related Images</section>
+        <article class="related-posts">Related Posts</article>
+    </div>
+    <footer>Footer</footer>
+</div>
+<!--task2-->
+<h1>Task2</h1>
+<div class="container2">
+    <div class="header2">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="content2">
+        <div class="left2">
+            <div class="box2"></div>
+        </div>
+        <div class="right2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+<!--Task3-->
+<h1>Task3</h1>
+<h2>Flexbox Justify-Self Demonstration</h2>
+
+<div class="container3">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+<p>justify-self will do nothing, because there is no space to distribute</p>
+
+<div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+<p>Now that we have space to distribute, we can use justify-self</p>
+
+<div class="container">
+    <div class="justify-start">
+        <div class="box" ></div>
+        <div class="box"></div>
+    </div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+<p>justify-self: flex-start</p>
+
+<div class="container">
+    
+    <div class="box"></div>
+    <div class="justify-start">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="box"></div>
+</div>
+<p>justify-self: flex-end</p>
+
+<div class="container">
+    <div class="justify-start left">
+        <div class="box" ></div>
+        <div class="box"></div>
+    </div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+<p>justify-self: flex-start</p>
+</body>
+</html>
+
