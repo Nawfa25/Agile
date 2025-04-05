@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  body {
+  background: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  height: 50vh;
+  width: 800px;
+}
+.boarding-pass {
+  position: relative;
+  display: flex;
+  width: 800px;
+  height: 250px;
+  background: url(https://thumbs.dreamstime.com/b/blue-watercolor-world-map-46731026.jpg) no-repeat center center;
+  background-size: cover;          
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
+}
+.pass-left {
+  flex: 3;
+}
+.top-banner {
+background: linear-gradient(to right, #920625, #c0dafc);
+padding: 10px;
+font-weight: bold;
+border-radius: 12px 0 0 0;
+}
+.top-banner h2{
+font-family: 'Great Vibes', cursive;
+font-size: 36px;
+color: #6d5c3d;
+}
+.top-banner h2 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 1px;
+  margin-left: 60px;
+}
+.airline-name {
+  margin: 0;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 1px;
+  margin-left: 60px;
+}
+.main-content {
+  margin-top: 15px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  margin-left: 70px;
+}
+.label {
+  font-size: 12px;
+  color: #666;
+  flex: 1;
+}
+.value {
+  font-size: 14px;
+  font-weight: bold;
+  flex: 1;
+}
+.separator {
+    border-right: 11px dotted rgb(129, 77, 96);
+    margin-left: -5px;
+    margin-right: -5px;
+    position: relative;
+}
+.route {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #c0dafc;
+}
+.city {
+  margin: 0 10px;
+}
+.plane-icon {
+  font-size: 18px;
+}
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 70px;
+  margin-right: 15px;
+}
+.pass-right {
+  flex: 1.1;
+  background-color: white;
+  color: rgb(150, 99, 99);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.mini-banner { 
+    background-color: #711a31; 
+    color: white;
+    padding: 19px;
+}
+.mini-banner {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+ .barcode-bottom{
+  height: 40px;
+  background: repeating-linear-gradient(
+    90deg,
+    #fff,
+    #fff 2px,
+    #000 2px,
+    #000 4px
+  );
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.barcode-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 30px;            
+  height: 150px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.barcode-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(-900deg);
+}
+.small-text {
+      font-size: 12px;
+      font-family: 'Segoe UI', sans-serif;
+      color: #888;
+      padding: 5px;
+      text-align: center;
+    }
+.right-details {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.right-details img{
+    width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+    </style>
+    </head>
+    <body>
+      <div class="boarding-pass">
+        <div class="pass-left">
+            <div class="top-banner">
+                <h2>save the date</h2>
+                <p class="airline-name">Boarding Pass</p>
+              </div>
+          <div class="main-content">
+            <div class="row">
+              <div class="label"><strong>WELCOME ABOARD:</strong><h1>.................</h1></div>
+              <div class="label"><strong>DESTINATION:</strong><h1>.............</h1></div>
+              <div class="label"><strong>DATE:</strong><h1>..........</h1></div>
+              <div class="label"><strong>SEAT:</strong><h1>............</h1></div>
+            </div>
+            <div class="row">
+              <div class="value">Blanche & Rose’s Wedding</div>
+              <div class="value">Fort Lauderdale, Florida</div>
+              <div class="value">09/09/2022</div>
+              <div class="value">09 |<strong>ROW:</strong>09</div>
+            </div>
+            <div class="route">
+              <span class="city">LONDON</span>
+              <span class="plane-icon">✈</span>
+              <span class="city">TOKYO</span>
+            </div>
+          </div>
+        </div>
+        <!-- Separator -->
+    <div class="separator"></div>
+        <div class="pass-right">
+          <div class="mini-banner">LONDON ✈ TOKYO</div>
+          <div class="small-text">September 09</div>
+          <div class="right-details">
+          <img src="https://t3.ftcdn.net/jpg/01/65/52/08/360_F_165520839_6E1bLjjMeUEYqdiyKgerqLPiKUDsMHgI.jpg" alt="couple pic">
+          </div>
+          <div class="barcode-bottom"></div>
+        </div>
+      </div>
+    </body>
+    </html>
