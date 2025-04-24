@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Choose & Update Elements</title>
+  <style>
+    .note {
+      color: navy;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Pick a fruit you enjoy the most:</h3>
+  <input type="radio" name="favFruit" value="Orange"> Orange<br>
+  <input type="radio" name="favFruit" value="Grapes"> Grapes<br>
+  <input type="radio" name="favFruit" value="Pineapple"> Pineapple<br>
+
+  <h3>Select the hobbies you love:</h3>
+  <input type="checkbox" name="userHobby" value="Drawing"> Drawing<br>
+  <input type="checkbox" name="userHobby" value="Hiking"> Hiking<br>
+  <input type="checkbox" name="userHobby" value="Coding"> Coding<br>
+
+  <br>
+  <button onclick="showChoices()">Reveal Choices</button>
+
+  <p id="resultBox"></p>
+
+
+  <h1 id="headline">Welcome to Agile Tribbers</h1>
+
+  <p class="desc note">Crafting tech with heart and purpose.</p>
+  <p class="desc note">Empowering digital experiences.</p>
+  <p class="desc note">We cherish performance and simplicity.</p>
+
+  <button onclick="updateContent()">Modify Appearance</button>
+
+  <script>
+    function showChoices() {
+      const chosenFruit = document.querySelector('input[name="favFruit"]:checked');
+      let pickedFruit = chosenFruit ? chosenFruit.value : "Nothing selected";
+
+      const hobbiesChecked = document.querySelectorAll('input[name="userHobby"]:checked');
+      let hobbyList = [];
+      hobbiesChecked.forEach(function(item) {
+        hobbyList.push(item.value);
+      });
+
+      document.getElementById("resultBox").innerHTML = 
+        "Your Favorite Fruit: " + pickedFruit + "<br>" +
+        "Your Hobbies: " + (hobbyList.length ? hobbyList.join(", ") : "No hobbies selected");
+    }
+
+    function updateContent() {
+
+      const mainTitle = document.getElementById("headline");
+      mainTitle.innerHTML = "Bright Coders - Your Imagination, Engineered!";
+      console.log("Updated Title:", mainTitle.innerHTML);
+
+      const firstPara = document.querySelector(".desc");
+      firstPara.style.color = "darkred";
+      firstPara.style.fontWeight = "600";
+      console.log("First Paragraph Text:", firstPara.textContent);
+
+      const noteItems = document.querySelectorAll(".note");
+      noteItems.forEach(function(el, i) {
+        el.style.background = "#f0f8ff";
+        el.style.borderLeft = "4px solid teal";
+        el.style.marginBottom = "4px";
+        console.log("Note [" + i + "]:", el.textContent);
+      });
+    }
+  </script>
+
+</body>
+</html>
