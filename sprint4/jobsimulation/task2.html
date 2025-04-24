@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List (No Checkbox)</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      margin: 50px auto;
+      max-width: 600px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      padding: 12px;
+      width: 70%;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+
+    button {
+      padding: 12px 16px;
+      background-color: #3498db;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    ul {
+      margin-top: 25px;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      background-color: #ffffff;
+      padding: 15px 20px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .task-content {
+      font-size: 16px;
+      color: #34495e;
+    }
+
+    .actions button {
+      margin-left: 8px;
+      background-color: #e67e22;
+    }
+
+    .actions button:hover {
+      background-color: #d35400;
+    }
+
+    .actions button:last-child {
+      background-color: #e74c3c;
+    }
+
+    .actions button:last-child:hover {
+      background-color: #c0392b;
+    }
+
+    .error {
+      color: #e74c3c;
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📝 My To-Do List</h2>
+
+  <div style="display: flex; gap: 10px;">
+    <input type="text" id="taskInput" placeholder="Enter a task..." />
+    <button onclick="addTask()">Add Task</button>
+  </div>
+  <p id="error" class="error"></p>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    let tasks = [];
+
+    function addTask() {
+      const input = document.getElementById("taskInput");
+      const error = document.getElementById("error");
+      const taskText = input.value.trim();
+
+      if (!taskText) {
+        error.textContent = "❌ Task cannot be empty.";
+        return;
+      }
+
+      if (tasks.some(task => task === taskText.toLowerCase())) {
+        error.textContent = "⚠️ Task already exists.";
+        return;
+      }
+
+      tasks.push(taskText.toLowerCase());
+      error.textContent = "";
+      input.value = "";
+      renderTasks();
+    }
+
+    function renderTasks() {
+      const taskList = document.getElementById("taskList");
+      taskList.innerHTML = "";
+
+      tasks.forEach((task, index) => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+          <div class="task-content">${task}</div>
+          <div class="actions">
+            <button onclick="editTask(${index})">Edit</button>
+            <button onclick="deleteTask(${index})">Delete</button>
+          </div>
+        `;
+
+        taskList.appendChild(li);
+      });
+    }
+
+    function deleteTask(index) {
+      tasks.splice(index, 1);
+      renderTasks();
+    }
+
+    function editTask(index) {
+      const newTask = prompt("Edit task:", tasks[index]);
+      const error = document.getElementById("error");
+
+      if (newTask === null) return;
+
+      const trimmedTask = newTask.trim();
+
+      if (!trimmedTask) {
+        error.textContent = "❌ Task cannot be empty.";
+        return;
+      }
+
+      if (tasks.some((task, i) => task === trimmedTask.toLowerCase() && i !== index)) {
+        error.textContent = "⚠️ Task already exists.";
+        return;
+      }
+
+      tasks[index] = trimmedTask.toLowerCase();
+      error.textContent = "";
+      renderTasks();
+    }
+  </script>
+
+</body>
+</html>
