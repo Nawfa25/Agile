@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creative Form Submission</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e6f7ff;
+      max-width: 650px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #4A90E2;
+      margin-bottom: 20px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 14px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 18px;
+      box-sizing: border-box;
+      background-color: #fff;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    input:focus, button:focus {
+      outline: none;
+      border-color: #4A90E2;
+    }
+
+    button {
+      background-color: #4A90E2;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #357ABD;
+    }
+
+    .error {
+      color: #FF4D4D;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .success {
+      color: #33CC33;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .data-display {
+      margin-top: 40px;
+      background-color: #ffffff;
+      padding: 25px;
+      border: 2px solid #d1e7ff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .data-display h3 {
+      color: #333;
+    }
+
+    .data-display p {
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>User Information Form</h2>
+
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Enter your name *" />
+    <input type="email" id="email" placeholder="Enter your email *" />
+    <input type="number" id="age" placeholder="Enter your age *" />
+    <button type="submit">Submit</button>
+    <p id="message" class=""></p>
+  </form>
+
+  <div id="displayBox" class="data-display" style="display: none;">
+    <h3>Submitted Details:</h3>
+    <p><strong>Name:</strong> <span id="dispName"></span></p>
+    <p><strong>Email:</strong> <span id="dispEmail"></span></p>
+    <p><strong>Age:</strong> <span id="dispAge"></span></p>
+  </div>
+
+  <script>
+    const form = document.getElementById("userForm");
+    const msg = document.getElementById("message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      msg.textContent = "";
+      msg.className = "";
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const age = document.getElementById("age").value.trim();
+
+      const nameRegex = /^[A-Za-z\s]+$/;
+      const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (!name || !email || !age) {
+        showError("All fields are required.");
+        return;
+      }
+
+      if (!nameRegex.test(name)) {
+        showError("Name should contain letters and spaces only.");
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        showError("Please enter a valid email (e.g., example@email.com).");
+        return;
+      }
+
+      if (isNaN(age) || age <= 0 || !Number.isInteger(Number(age))) {
+        showError("Age must be a valid number greater than 0.");
+        return;
+      }
+
+      const user = { name, email, age };
+      localStorage.setItem("userData", JSON.stringify(user));
+      showSuccess("Data saved successfully!");
+      displayUserData();
+    });
+
+    function showError(message) {
+      msg.className = "error";
+      msg.textContent = message;
+    }
+
+    function showSuccess(message) {
+      msg.className = "success";
+      msg.textContent = message;
+    }
+
+    function displayUserData() {
+      const stored = localStorage.getItem("userData");
+      if (stored) {
+        const user = JSON.parse(stored);
+        document.getElementById("dispName").textContent = user.name;
+        document.getElementById("dispEmail").textContent = user.email;
+        document.getElementById("dispAge").textContent = user.age;
+        document.getElementById("displayBox").style.display = "block";
+      }
+    }
+    window.addEventListener("load", displayUserData);
+  </script>
+</body>
+</html>
