@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Events Demo</title>
+  <style>
+    #hoverArea {
+      width: 300px;
+      height: 150px;
+      background-color: peachpuff;
+      text-align: center;
+      line-height: 150px;
+      font-size: 18px;
+      border: 2px dashed #333;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+    <p>1. When clicked, message shows in developer tools</p>
+    <button id="clickBtn">Press Here</button><br />
+
+    <p>2. Add two numbers and check result in console</p>
+    <button onclick="addNumbers()">Compute Total</button><br />
+
+    <p>3. Enter text and log it in console</p>
+    <input type="text" id="inputLog" placeholder="Write anything...">
+    <button onclick="logInput()">Log Text</button><br />
+
+    <p>4. Input will appear below when button is pressed</p>
+    <input type="text" id="inputDisplay" placeholder="Enter here...">
+    <button onclick="showText()">Reveal</button>
+    <p id="textResult"></p><br />
+
+    <p>5. Enter text and hit enter or click outside to display it below</p>
+    <input type="text" id="inputLive" placeholder="Live update" onchange="updateHeading()">
+    <h1 id="liveOutput"></h1><br />
+
+    <p>6. Double click the button to see message below</p>
+    <button ondblclick="showDoubleClick()">Double Tap</button>
+    <h2 id="dblMsg"></h2><br />
+
+    <p>7. Hover your mouse over the box</p>
+    <div id="hoverArea">Move your mouse here</div>
+    <p id="hoverStatus"></p><br />
+
+    <p>8. Key press and release events show in real-time</p>
+    <input type="text" placeholder="Start typing..." id="keyActivity">
+</body>
+
+<script>
+  document.getElementById("clickBtn").onclick = function () {
+    console.log("Button has been clicked!");
+  };
+
+  function addNumbers() {
+    let a = 12;
+    let b = 8;
+    console.log("Sum:", a + b);
+  }
+
+  function logInput() {
+    const value = document.getElementById("inputLog").value;
+    console.log("You typed:", value);
+  }
+
+  function showText() {
+    const inputVal = document.getElementById("inputDisplay").value;
+    document.getElementById("textResult").innerText = inputVal;
+  }
+
+  function updateHeading() {
+    const val = document.getElementById("inputLive").value;
+    document.getElementById("liveOutput").innerText = val;
+  }
+
+  function showDoubleClick() {
+    document.getElementById("dblMsg").innerText = "Double click successful!";
+  }
+
+  const hoverBox = document.getElementById("hoverArea");
+  hoverBox.onmouseenter = () => {
+    document.getElementById("hoverStatus").innerText = "Mouse is over the box!";
+  };
+  hoverBox.onmouseleave = () => {
+    document.getElementById("hoverStatus").innerText = "Mouse left the area.";
+  };
+
+  const keyBox = document.getElementById("keyActivity");
+  keyBox.onkeydown = () => {
+    console.log("Key is being pressed.");
+  };
+  keyBox.onkeyup = () => {
+    console.log("Key has been released.");
+  };
+</script>
+</html>
